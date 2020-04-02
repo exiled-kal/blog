@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+        {% load static %}
+    <link rel="stylesheet" href="{% static 'style1.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.css" />
+</head>
+<body>
+    <div class ="create">
+        <form action="process_new" method="POST">
+            {% csrf_token %}
+            <textarea name="description" id="text" cols="30" rows="10"></textarea>
+            <button type="submit">Create Blog</button>
+        </form>
+    </div>
+</body>
+</html>
